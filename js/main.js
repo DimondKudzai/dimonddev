@@ -1,24 +1,24 @@
 AOS.init();
 
 
-const button=document.getElementById("theme");
+const button = document.getElementById("theme");
 
 
-button.onclick=function(){
+button.onclick = function(){
 
-document.body.classList.toggle("light");
+    document.body.classList.toggle("light");
 
-
-if(document.body.classList.contains("light")){
-
-document.body.style.background="#ffffff";
-document.body.style.color="#111";
-
-}else{
-
-document.body.style.background="#050505";
-document.body.style.color="#fff";
-
-}
+    // Save preference
+    if(document.body.classList.contains("light")){
+        localStorage.setItem("theme","light");
+    } else {
+        localStorage.setItem("theme","dark");
+    }
 
 };
+
+
+// Load saved theme
+if(localStorage.getItem("theme") === "light"){
+    document.body.classList.add("light");
+}

@@ -5,7 +5,7 @@ if(ctx){
 
 new Chart(ctx, {
 
-type:"radar",
+type:"bar",
 
 data:{
 
@@ -32,7 +32,7 @@ data:[
 85,
 80,
 83,
-78,
+80,
 90,
 87,
 85
