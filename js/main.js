@@ -1,24 +1,24 @@
 AOS.init();
 
-
 const button = document.getElementById("theme");
 
+// Load saved theme
+const savedTheme = localStorage.getItem("theme");
 
-button.onclick = function(){
+if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+}
 
-    document.body.classList.toggle("light");
 
-    // Save preference
-    if(document.body.classList.contains("light")){
-        localStorage.setItem("theme","light");
+// Toggle button
+button.addEventListener("click", function(){
+
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("theme", "dark");
     } else {
-        localStorage.setItem("theme","dark");
+        localStorage.setItem("theme", "light");
     }
 
-};
-
-
-// Load saved theme
-if(localStorage.getItem("theme") === "light"){
-    document.body.classList.add("light");
-}
+});

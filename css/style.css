@@ -1,25 +1,22 @@
 :root {
-
-    --bg: #050505;
-    --text: #ffffff;
-    --muted: #aaa;
-    --card: #0b0b0b;
-    --border: #222;
-    --accent: #00ff99;
-
-}
-
-
-.light {
-
     --bg: #ffffff;
     --text: #111111;
     --muted: #555;
     --card: #f5f5f5;
     --border: #dddddd;
     --accent: #008f5a;
-
 }
+
+
+.dark {
+    --bg: #050505;
+    --text: #ffffff;
+    --muted: #aaa;
+    --card: #0b0b0b;
+    --border: #222;
+    --accent: #00ff99;
+}
+
 
 html {
   scroll-behavior: smooth;
